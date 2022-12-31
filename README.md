@@ -40,7 +40,7 @@ Table of Contents
 
 # Practical Kubernetes Problems
 
-This repo provides some resources to learn Kubernetes through practical exercises for the [Practical Kubernetes Training](https://trainings.kubernauts.sh/) for self study to learn how easy it is to understand and master Kubernetes complexity and problems.
+This repo provides some resources to learn Kubernetes through practical exercises for self study to learn how easy it is to understand and master Kubernetes complexity and problems.
 
 Kubernetes is easy to understand, even if it looks hard at the first look on the icons or the resources map, this course is about to help you to understand K8s and learn how to start!
 
@@ -77,8 +77,7 @@ To get prepared please install at least kubectx and kns with krew from this list
 
 [The Golden Kubernetes Tooling and Helpers list](http://bit.ly/kubernetes-tooling-list)
 
-We can use any Kubernetes cluster (> 1.14) on our local machine or in the cloud. For online trainings we recommend to have either k3s installed with k3d, use Kind, Docker for Desktop or a near-to-production k3s or rke cluster on your local machine with MetalLB for load balancing (nice to have). We recommend to have [K3S with MetalLB on Multipass VMs](https://blog.kubernauts.io/k3s-with-metallb-on-multipass-vms-ac2b37298589) running on your machine or the [kubeadm-multipass](https://github.com/arashkaffamanesh/kubeadm-multipass) implementation.  
-
+We can use any Kubernetes cluster (> 1.21) on our local machine or in the cloud. For online trainings we recommend to have either k3s installed with k3d, use Kind, or Docker for Desktop.  
 
 We'll use some slides from:
 
