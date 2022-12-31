@@ -1,3 +1,43 @@
+Table of Contents
+=================
+
+- [Table of Contents](#table-of-contents)
+- [Practical Kubernetes Problems](#practical-kubernetes-problems)
+  - [Prerequisites](#prerequisites)
+  - [Preparation](#preparation)
+  - [Tools we use](#tools-we-use)
+    - [Useful aliases](#useful-aliases)
+  - [KUBECTL CheatSheet and GOODIES](#kubectl-cheatsheet-and-goodies)
+    - [k create namespace imperative via declarative](#k-create-namespace-imperative-via-declarative)
+    - [k create / run pods or deploymens with dry-run](#k-create--run-pods-or-deploymens-with-dry-run)
+    - [k get events and logs, describe objects](#k-get-events-and-logs-describe-objects)
+    - [Merging contexts (e.g. merge 2 kubeconfigs from 2 cluster contexts)](#merging-contexts-eg-merge-2-kubeconfigs-from-2-cluster-contexts)
+    - [Kubernetes Secrets are not secret](#kubernetes-secrets-are-not-secret)
+      - [Further reading:](#further-reading)
+    - [Kubernetes ConfigMaps](#kubernetes-configmaps)
+  - [Whoami, Whoareyou and Whereami Problems](#whoami-whoareyou-and-whereami-problems)
+    - [What We’ll Do](#what-well-do)
+  - [DNS based Service discovery with whereami kubia pod](#dns-based-service-discovery-with-whereami-kubia-pod)
+    - [What We’ll Do](#what-well-do-1)
+    - [Headless Services for Stickiness](#headless-services-for-stickiness)
+  - [Ingress with TLS](#ingress-with-tls)
+  - [Multi-Container Pods](#multi-container-pods)
+    - [Shared Volume](#shared-volume)
+  - [Security](#security)
+    - [Service Accounts](#service-accounts)
+    - [Using a Custom ServiceAccount](#using-a-custom-serviceaccount)
+    - [RBAC (Role Based Access Control)](#rbac-role-based-access-control)
+      - [Role](#role)
+      - [ClusterRole](#clusterrole)
+      - [RoleBinding and ClusterRoleBinding](#rolebinding-and-clusterrolebinding)
+      - [What We’ll Do](#what-well-do-2)
+      - [Further reading:](#further-reading-1)
+      - [Permission Manager](#permission-manager)
+  - [3-Tier App (MVC)](#3-tier-app-mvc)
+- [Day 2 Operation](#day-2-operation)
+    - [Pod AutoScaling with HPA (Horizontal Pod Autoscaler)](#pod-autoscaling-with-hpa-horizontal-pod-autoscaler)
+    - [Coming next](#coming-next)
+
 # Practical Kubernetes Problems
 
 This repo provides some resources to learn Kubernetes through practical exercises for the [Practical Kubernetes Training](https://trainings.kubernauts.sh/) for self study to learn how easy it is to understand and master Kubernetes complexity and problems.
@@ -8,7 +48,7 @@ Kubernetes is easy to understand, even if it looks hard at the first look on the
 
 ![k8s-resources-map](images/k8s-resources-map.png "k8s-resources-map")
 
-## Prerequsites
+## Prerequisites
 
 It would be nice if you know what `kubectl` is and have a basic understanding of running conatiners with docker / containerd or cri-o.
 

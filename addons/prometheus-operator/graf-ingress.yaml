@@ -1,4 +1,5 @@
-apiVersion: extensions/v1beta1
+#apiVersion: extensions/v1beta1 #changed
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: graf-ingress
@@ -12,8 +13,13 @@ spec:
     - host: graf.kubernauts.local
       http:
         paths:
-          - path: /
-            backend:
-              serviceName: promo-grafana 
-              servicePort: 80
+        - path: /
+          pathType: Prefix #changed
+          backend:
+            #serviceName: promo-grafana #changed
+            service:
+              name: promo-grafana
+            #servicePort: 80 #changed
+              port:
+                number: 80
 

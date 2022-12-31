@@ -1,7 +1,8 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: whoami-service-nodeport
+  #name: whoami-service-nodeport #changed
+  name: whoami-service
 spec:
   ports:
   - name: http

@@ -1,8 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  annotations:
-    deployment.kubernetes.io/revision: "1"
+  # changed
+  # annotations:
+  #   deployment.kubernetes.io/revision: "1"
   labels:
     run: ghost
   name: ghost

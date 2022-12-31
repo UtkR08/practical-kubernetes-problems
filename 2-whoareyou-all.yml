@@ -28,18 +28,44 @@ spec:
   selector:
     app: whoareyou
 ---
-apiVersion: extensions/v1beta1
+# changed
+# apiVersion: extensions/v1beta1
+# kind: Ingress
+# metadata:
+#   name: whoareyou-ingress
+#   annotations:
+#     kubernetes.io/ingress.class: "traefik" 
+# spec:
+#   rules:
+#   - host: node2 
+#     http:
+#       paths:
+#       - path: /
+#         backend:
+#           serviceName: whoareyou-service
+#           servicePort: http
+
+
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: whoareyou-ingress
   annotations:
-    kubernetes.io/ingress.class: "traefik" 
+    ingressclass.kubernetes.io/is-default-class: "true"
 spec:
+  ingressClassName: traefik
   rules:
-  - host: node2 
+  - host: node2
     http:
       paths:
       - path: /
+        pathType: Prefix
         backend:
-          serviceName: whoareyou-service
-          servicePort: http
+          service:
+            name: whoareyou-service
+            port:
+              number: 80
+
+# Do we need to add IngreessClass https://kubernetes.github.io/ingress-nginx/#i-have-only-one-instance-of-the-ingresss-nginx-controller-in-my-cluster-what-should-i-do
+
+
