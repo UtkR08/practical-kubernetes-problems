@@ -8,6 +8,10 @@ Kubernetes is easy to understand, even if it looks hard at the first look on the
 
 ![k8s-resources-map](images/k8s-resources-map.png "k8s-resources-map")
 
+## Update history
+
+Release 2022.12.31 provides additional modules for elastic, opensearch-fluentbit-stack, kube-prometheus-stack, etc..
+
 ## Prerequisites
 
 It would be nice if you know what `kubectl` is and have a basic understanding of running conatiners with docker / containerd or cri-o.
